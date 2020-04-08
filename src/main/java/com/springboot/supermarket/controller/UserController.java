@@ -32,7 +32,7 @@ public class UserController {
     @Autowired
     JavaMailSenderImpl javaMailSender;    //邮件发送器
 
-    //激活
+    //激活功能
     @GetMapping("/active")
     public String active(String email){
      return  userService.activateMail(email);
@@ -52,7 +52,7 @@ public class UserController {
         //正则表达式，
         //这个是一个企业级的程序里copy出来的。
         if (!flag) {
-            System.out.println("邮箱不正确");
+            System.out.println("邮箱不正确啊");
            msg="邮箱格式无效";
            return msg;
         }else{
